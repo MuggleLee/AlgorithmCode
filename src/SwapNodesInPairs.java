@@ -9,6 +9,21 @@
  */
 public class SwapNodesInPairs {
 
+    public ListNode swapPairs(ListNode head) {
+        ListNode tem = new ListNode(0);
+        tem.next = head;
+        ListNode result = tem;
+        while (head != null) {
+            ListNode nextNode = head.next;
+            head.next = nextNode.next;
+            nextNode.next = head;
+            tem.next = nextNode;
+            head = head.next;
+            tem = tem.next.next;
+        }
+        return result.next;
+    }
+
 //    public ListNode swapPairs(ListNode head) {
 //        ListNode result = new ListNode(0);
 //        result.next = head;
@@ -25,23 +40,23 @@ public class SwapNodesInPairs {
 //        return dummy.next;
 //    }
 
-    public ListNode swapPairs(ListNode head) {
-
-        ListNode tem = new ListNode(0);
-        tem.next = head;
-        ListNode result = tem;
-
-        while (head != null) {
-            ListNode nextNode = head.next;
-            tem.next = nextNode;
-            head.next = nextNode.next;
-            nextNode.next = head;
-            head = head.next;
-            tem = tem.next.next;
-        }
-
-        return result.next;
-    }
+//    public ListNode swapPairs(ListNode head) {
+//
+//        ListNode tem = new ListNode(0);
+//        tem.next = head;
+//        ListNode result = tem;
+//
+//        while (head != null) {
+//            ListNode nextNode = head.next;
+//            tem.next = nextNode;
+//            head.next = nextNode.next;
+//            nextNode.next = head;
+//            head = head.next;
+//            tem = tem.next.next;
+//        }
+//
+//        return result.next;
+//    }
 
     // 测试
     public static void main(String[] args) {
@@ -53,5 +68,4 @@ public class SwapNodesInPairs {
         ListNode node = swapNodesInPairs.swapPairs(listNode);
         System.out.println(node);
     }
-
 }
