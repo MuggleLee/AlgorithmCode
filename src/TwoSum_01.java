@@ -12,7 +12,7 @@ import java.util.Map;
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
  */
-public class TwoSum {
+public class TwoSum_01 {
 
     /**
      * 解法1：暴力破解法。用双重循环，时间复杂度为O(n^2)
@@ -53,13 +53,5 @@ public class TwoSum {
 
         }
         return null;
-    }
-
-    // 测试
-    public static void main(String[] args) {
-        int[] nums = new int[]{3, 2, 4};
-        int target = 6;
-        TwoSum test = new TwoSum();
-        System.out.println(test.twoSum(nums, target));
     }
 }

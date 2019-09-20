@@ -9,7 +9,7 @@
  * Follow up:
  * A linked list can be reversed either iteratively or recursively. Could you implement both?
  */
-public class ReverseLinkedList {
+public class ReverseLinkedList_206 {
     /**
      * 递归改变每个节点(ListNode)的next指向
      *
@@ -25,15 +25,5 @@ public class ReverseLinkedList {
             head = nextNode;
         }
         return pre;
-    }
-
-    // 测试
-    public static void main(String[] args) {
-        ListNode listNode = new ListNode(1);
-        listNode.next = new ListNode(2);
-        listNode.next.next = new ListNode(3);
-        ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
-        ListNode node = reverseLinkedList.reverseList(listNode);
-        System.out.println(node);
     }
 }
