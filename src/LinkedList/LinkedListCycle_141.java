@@ -1,5 +1,4 @@
-import java.util.HashSet;
-import java.util.Set;
+package LinkedList;
 
 /**
  * @author Muggle Lee

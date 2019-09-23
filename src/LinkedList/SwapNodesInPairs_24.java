@@ -1,3 +1,5 @@
+package LinkedList;
+
 /**
  * @author Muggle Lee
  * @Date: 2019/9/19 15:07

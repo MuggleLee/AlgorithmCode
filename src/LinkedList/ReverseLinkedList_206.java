@@ -1,3 +1,5 @@
+package LinkedList;
+
 /**
  * @author Muggle Lee
  * @Date: 2019/9/19 13:56
@@ -25,5 +27,16 @@ public class ReverseLinkedList_206 {
             head = nextNode;
         }
         return pre;
+    }
+
+    public static void main(String[] args) {
+        ListNode listNode1 = new ListNode(1);
+        ListNode listNode2 = new ListNode(6);
+        ListNode listNode3 = new ListNode(2);
+        listNode1.next = listNode2;
+        listNode2.next = listNode3;
+        ReverseLinkedList_206 reverseLinkedList = new ReverseLinkedList_206();
+        ListNode node = reverseLinkedList.reverseList(listNode1);
+        System.out.println(node);
     }
 }
