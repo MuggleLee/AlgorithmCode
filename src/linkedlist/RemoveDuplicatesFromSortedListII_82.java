@@ -17,7 +17,7 @@ package linkedlist;
  */
 public class RemoveDuplicatesFromSortedListII_82 {
     public ListNode deleteDuplicates(ListNode head) {
-        if (head != null) {
+        if (head == null) {
             return head;
         }
         ListNode node = head;
@@ -31,12 +31,13 @@ public class RemoveDuplicatesFromSortedListII_82 {
                 flag = node.val;
             }
             flag = node.val;
-            node = nextNode.next;
+            node = nextNode;
         }
         return result;
     }
 
     public static void main(String[] args) {
+        System.out.println(3 % 7);
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
         ListNode listNode3 = new ListNode(3);
